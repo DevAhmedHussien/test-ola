@@ -1,4 +1,4 @@
-import { TimeInterval } from '../components/TimeIntervalBlock/types';
+import { TimeInterval } from '../components/EventsSlider/types';
 
 export const mockIntervals: TimeInterval[] = [
   {

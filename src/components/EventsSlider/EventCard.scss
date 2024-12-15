@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.event-card {
+  background: white;
+  .event-date {
+    display: block;
+    font-size: 0.875rem;
+    color: #EF5DA8;
+  }
+}

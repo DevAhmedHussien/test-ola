@@ -1,4 +1,4 @@
-import { Category } from '../components/TimeIntervalBlock/types';
+import { Category } from '../components/EventsSlider/types';
 
 export const categoryData: Category[] = [
   {

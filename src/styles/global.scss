@@ -1,29 +1,30 @@
 @import './variables.scss';
 
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: $background-color;
   color: $text-color;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'PT Sans';
+
 }
 
 .app-container {
+  position: relative;
+  margin: 10px auto;
   min-height: 100vh;
-  padding: $spacing-xl;
-}
-
-.content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 1200px;
+  // padding: $spacing-xl;
+  border-right: 1px solid rgba(66, 86, 122, 0.2);
+  border-left: 1px solid rgba(66, 86, 122, 0.2);
 }
 
 .navigation-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: $spacing-xl;
-  margin: $spacing-xl 0;
+  margin: -9rem;
 }
 
 .nav-button {
@@ -49,4 +50,32 @@ body {
   &:active {
     transform: scale(0.95);
   }
+}
+
+.point-label {
+  position: absolute;
+  top: 12%;
+  right: 33%;
+  width: 53px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  
+  // Smooth transition for opacity and transform
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  
+  &.fade-out {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hidding{
+  display: none;
 }
