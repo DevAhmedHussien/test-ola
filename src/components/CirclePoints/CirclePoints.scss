@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+.circle-points {
+  position: relative;
+  width: 500px; // Increased container size
+  height: 500px;
+  margin: 0 auto;
+}
+
+.circle-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+}
+
+.circle-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  circle {
+    fill: none;
+    stroke: $primary-color;
+    stroke-width: 2;
+    opacity: 0.2;
+    r: 220px; // Increased radius for the SVG circle
+    cx: 250px; // Updated to match the new container size
+    cy: 250px;
+  }
+}
+
+.point-wrapper {
+  position: absolute;
+}
+
+.point {
+  position: relative;
+  width: 8px; // Made points smaller
+  height: 8px;
+  background-color: $primary-color;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 1.2s ease, transform 1.2s ease;
+
+  &.active {
+    background-color: $secondary-color;
+    transform: scale(1.3);
+  }
+
+  .hover-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px; // Slightly larger hover circle
+    height: 44px;
+    background: white;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary-color;
+    font-size: 1rem;
+    font-weight: bold;
+    pointer-events: none;
+    animation: popIn 1.2s ease forwards;
+  }
+}
+
+// Animation for smooth appearance
+@keyframes popIn {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
