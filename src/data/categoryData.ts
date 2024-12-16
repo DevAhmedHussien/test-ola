@@ -6,43 +6,28 @@ export const categoryData: Category[] = [
     label: 'Story',
     cards: [
       {
-        title: 'Global Sports',
+        title: '1987',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '1988',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },   {
-        title: 'Global Sports',
+        title: '1989',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      },
-      {
-        title: 'Global Sports',
+        title: '1990',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      },   {
-        title: 'Global Sports',
+        title: '1990',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '1991',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      }
+      },
     ]
   },
   {
@@ -50,43 +35,32 @@ export const categoryData: Category[] = [
     label: 'Cinema',
     cards: [
       {
-        title: 'Global Sports',
+        title: '1991',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '1992',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },   {
-        title: 'Global Sports',
+        title: '1993',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '1994',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },
       {
-        title: 'Global Sports',
+        title: '1995',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '1996',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      },   {
-        title: 'Global Sports',
+      },   
+      {
+        title: '1997',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
-      {
-        title: 'Athletic Excellence',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      }
     ]
   },
   {
@@ -94,87 +68,58 @@ export const categoryData: Category[] = [
     label: 'Sport',
     cards: [
       {
-        title: 'Global Sports',
+        title: '1998',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '1999',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },   {
-        title: 'Global Sports',
+        title: '2000',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2001',
         description: 'Stories of determination, perseverance, and triumph in sports.',
         imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },
       {
-        title: 'Global Sports',
+        title: '2002',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2003',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      },   {
-        title: 'Global Sports',
-        description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
-      },
-      {
-        title: 'Athletic Excellence',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       }
     ]
   },
   {
     id: 4,
-    label: 'Sport',
+    label: 'hamada',
     cards: [
       {
-        title: 'Global Sports',
+        title: '2005',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2006',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },   {
-        title: 'Global Sports',
+        title: '2007',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2008',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },
       {
-        title: 'Global Sports',
+        title: '2009',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2010',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      },   {
-        title: 'Global Sports',
-        description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
-      },
-      {
-        title: 'Athletic Excellence',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      }
+      },  
     ]
   },
   {
@@ -182,43 +127,29 @@ export const categoryData: Category[] = [
     label: 'Sport',
     cards: [
       {
-        title: 'Global Sports',
+        title: '2011',
+
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2012',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },   {
-        title: 'Global Sports',
+        title: '2013',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2014',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },
       {
-        title: 'Global Sports',
+        title: '2015',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2016',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      },   {
-        title: 'Global Sports',
-        description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
-      },
-      {
-        title: 'Athletic Excellence',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      }
+      },  
     ]
   },
   {
@@ -226,43 +157,28 @@ export const categoryData: Category[] = [
     label: 'Sport',
     cards: [
       {
-        title: 'Global Sports',
+        title: '2017',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2018',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },   {
-        title: 'Global Sports',
+        title: '2019',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2020',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
       },
       {
-        title: 'Global Sports',
+        title: '2021',
         description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
       },
       {
-        title: 'Athletic Excellence',
+        title: '2022',
         description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      },   {
-        title: 'Global Sports',
-        description: 'The most popular sports and their impact on global culture.',
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
-      },
-      {
-        title: 'Athletic Excellence',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
-      }
+      },  
     ]
   }
 ];

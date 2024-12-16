@@ -1,42 +1,29 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as vars;
 
 .events-slider-container {
   position: relative;
   width: 94%;
+  overflow: auto;
+  @include vars.flex-standard;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   .events-slider {
-    padding: $spacing-md;
+    height: 250px;
+    .swiper-pagination {
+      bottom: 0px;
+    }
+    .swiper-pagination-bullet {
+      background-color:vars.$text-prim; 
+    }
+    .swiper-pagination-bullet-active {
+      background:vars.$secondary-color;
+    }
   }
 
   .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin: 0;
+    min-width: 210px;
   }
-
-  .event-card {
-    text-align: left;
-    max-width: 220px;
-    padding: 0;
-    background-color: transparent;
-
-    h3 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #1565c0;
-      margin-bottom: 8px;
-    }
-
-    p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.4;
-      margin: 0;
-    }
-  }
-
-
 }

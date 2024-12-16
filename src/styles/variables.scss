@@ -2,16 +2,25 @@
 $primary-color:  #303E5880; 
 $secondary-color: #42567A;
 $background-color: #f8fafc;
-$text-color: #1e293b;
+$text-color: black;
+$text-prim:  #1565c0;
+$text-sec: #EF5DA8;
 
 // Spacing
 $spacing-sm: 0.5rem;
 $spacing-md: 1rem;
-$spacing-lg: 1.5rem;
+$spacing-lg:  0rem 0rem 0rem 4rem;
 $spacing-xl: 2rem;
 
 // Breakpoints
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
+$breakpoint-xl: 1280px; 
+
+//  mixin 
+@mixin flex-standard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

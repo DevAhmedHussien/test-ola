@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Event } from './types';
 import './EventsSlider.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination'; 
 import { EventCard } from './EventCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -20,7 +21,6 @@ export const EventsSlider: React.FC<EventsSliderProps> = ({ events }) => {
     setActiveIndex(swiper.activeIndex);
   };
 
-
   const goNext = () => {
     swiperRef.current?.swiper.slideNext();
   };
@@ -31,22 +31,40 @@ export const EventsSlider: React.FC<EventsSliderProps> = ({ events }) => {
 
   return (
     <div className="events-slider-container">
-        {/* Conditional Left Arrow */}
-        {activeIndex > 0 && (
-        <button
-          className="nav-button"
-          onClick={goPrev}
-          aria-label="Next card"
-        >
-        <ChevronLeft size={24} />
+      
+      {/* Conditional Left Arrow */}
+      {activeIndex > 0 && (
+        <button className="nav-button hide" onClick={goPrev} aria-label="Previous card">
+          <ChevronLeft size={24} />
         </button>
       )}
-
       <Swiper
         ref={swiperRef}
-        modules={[Navigation]}
-        spaceBetween={30}
+        modules={[Navigation, Pagination]}
+        spaceBetween={20}
         slidesPerView={4}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 2,
+            pagination: { enabled: true },
+          },
+          600: {
+            slidesPerView: 3,
+            pagination: { enabled: true },
+          },
+          768: {
+            slidesPerView: 3,
+            pagination: { enabled: false },
+          },
+          1024: {
+            slidesPerView: 4,
+            pagination: { enabled: false },
+          },
+        }}
         onSlideChange={handleSlideChange}
         className="events-slider"
       >
@@ -57,16 +75,11 @@ export const EventsSlider: React.FC<EventsSliderProps> = ({ events }) => {
         ))}
       </Swiper>
 
-    
       {/* Conditional Right Arrow */}
       {activeIndex < events.length - 4 && (
-        <button
-          className="nav-button"
-          onClick={goNext}
-          aria-label="Previous card"
-        >
-        <ChevronRight size={24} />
-      </button>
+        <button className="nav-button hide" onClick={goNext} aria-label="Next card">
+          <ChevronRight size={24} />
+        </button>
       )}
     </div>
   );
