@@ -7,178 +7,178 @@ export const categoryData: Category[] = [
     cards: [
       {
         title: '1987',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'A year that defined global culture with incredible stories of resilience.',
       },
       {
         title: '1988',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },   {
+        description: 'Epic tales of perseverance that captured the hearts of millions.',
+      },
+      {
         title: '1989',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'Unforgettable narratives that shaped the history of storytelling.',
       },
       {
         title: '1990',
-        description: 'The most popular sports and their impact on global culture.',
-      },
-      {
-        title: '1990',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'A golden era for stories that inspired generations.',
       },
       {
         title: '1991',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
+        description: 'Legendary stories of triumph and endurance.',
       },
-    ]
+      {
+        title: '1992',
+        description: 'A year filled with groundbreaking narratives and cultural milestones.',
+      },
+    ],
   },
   {
     id: 2,
     label: 'Cinema',
     cards: [
       {
-        title: '1991',
-        description: 'The most popular sports and their impact on global culture.',
-      },
-      {
-        title: '1992',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },   {
         title: '1993',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'Iconic films that redefined the art of storytelling.',
       },
       {
         title: '1994',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
+        description: 'Movies that left a lasting impact on cinema lovers worldwide.',
       },
       {
         title: '1995',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'A year of cinematic masterpieces and unforgettable characters.',
       },
       {
         title: '1996',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },   
+        description: 'Blockbusters and indie films that changed the industry.',
+      },
       {
         title: '1997',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'A cinematic revolution with groundbreaking special effects.',
       },
-    ]
+      {
+        title: '1998',
+        description: 'Stories that blended art and technology to create magic on screen.',
+      },
+    ],
   },
   {
     id: 3,
     label: 'Sport',
     cards: [
       {
-        title: '1998',
-        description: 'The most popular sports and their impact on global culture.',
+        title: '1999',
+        description: 'The year of iconic sports achievements and legends.',
       },
       {
-        title: '1999',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },   {
         title: '2000',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'A new millennium of records and remarkable athletes.',
       },
       {
         title: '2001',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-        imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77'
+        description: 'Sports stories that inspired millions to pursue greatness.',
       },
       {
         title: '2002',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'Unparalleled feats of strength, skill, and determination.',
       },
       {
         title: '2003',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      }
-    ]
+        description: 'A year filled with historic wins and unforgettable moments.',
+      },
+      {
+        title: '2004',
+        description: 'Champions who defied the odds and made history.',
+      },
+    ],
   },
   {
     id: 4,
-    label: 'hamada',
+    label: 'Social',
     cards: [
       {
         title: '2005',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'Movements and milestones that shaped modern society.',
       },
       {
         title: '2006',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },   {
+        description: 'A year of social change and collective action.',
+      },
+      {
         title: '2007',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'Stories of unity, diversity, and progress.',
       },
       {
         title: '2008',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
+        description: 'Defining moments in social history and human rights.',
       },
       {
         title: '2009',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'A year of powerful voices and transformative ideas.',
       },
       {
         title: '2010',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },  
-    ]
+        description: 'Movements that inspired a generation to stand up for change.',
+      },
+    ],
   },
   {
     id: 5,
-    label: 'Sport',
+    label: 'Coding',
     cards: [
       {
         title: '2011',
-
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'Innovations in coding that changed the tech landscape.',
       },
       {
         title: '2012',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },   {
+        description: 'New programming languages and frameworks emerged.',
+      },
+      {
         title: '2013',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'A breakthrough year for open-source projects.',
       },
       {
         title: '2014',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
+        description: 'Technologies that paved the way for modern development.',
       },
       {
         title: '2015',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'A year of rapid advancements in web and mobile development.',
       },
       {
         title: '2016',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },  
-    ]
+        description: 'Coding practices that set new industry standards.',
+      },
+    ],
   },
   {
     id: 6,
-    label: 'Sport',
+    label: 'OOP',
     cards: [
       {
         title: '2017',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'The rise of object-oriented programming paradigms.',
       },
       {
         title: '2018',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },   {
+        description: 'OOP principles applied in modern software development.',
+      },
+      {
         title: '2019',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'Innovative OOP techniques that streamlined development.',
       },
       {
         title: '2020',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
+        description: 'OOP patterns and practices that dominated the industry.',
       },
       {
         title: '2021',
-        description: 'The most popular sports and their impact on global culture.',
+        description: 'Advancements in OOP for scalable and maintainable code.',
       },
       {
         title: '2022',
-        description: 'Stories of determination, perseverance, and triumph in sports.',
-      },  
-    ]
-  }
+        description: 'The continued evolution and future of object-oriented programming.',
+      },
+    ],
+  },
 ];

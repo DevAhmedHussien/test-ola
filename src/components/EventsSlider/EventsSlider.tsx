@@ -1,21 +1,20 @@
-// ** React
 import React, { useRef, useState } from 'react';
 
-// ** third party 
+// ** Third-party imports
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination'; 
+import 'swiper/css/pagination';
 
-// ** Icon
+// ** Icons
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-// ** Resuble componenet 
+// ** Reusable component
 import { EventCard } from './EventCard';
 import { Event } from './types';
 
-// ** Scss styles 
+// ** SCSS styles
 import './EventsSlider.scss';
 
 interface EventsSliderProps {
@@ -23,79 +22,63 @@ interface EventsSliderProps {
 }
 
 export const EventsSlider: React.FC<EventsSliderProps> = ({ events }) => {
-  
-  // ** States 
+
+  // ** State to track active index
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // ** Ref
+  // ** Ref for Swiper instance
   const swiperRef = useRef<any>(null);
 
-  // ** Controlling active index 
+  // ** Handle slide change
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
 
-  // ** going next index 
+  // ** Go to next slide
   const goNext = () => {
     swiperRef.current?.swiper.slideNext();
   };
 
-  // ** going previous index 
+  // ** Go to previous slide
   const goPrev = () => {
     swiperRef.current?.swiper.slidePrev();
   };
 
   return (
     <div className="events-slider-container">
-      
+
       {/* Conditional Left Arrow */}
       {activeIndex > 0 && (
-        <button className="nav-button hide" onClick={goPrev} aria-label="Previous card">
+        <button className="nav-button" 
+          onClick={goPrev} 
+          aria-label="Previous card">
           <ChevronLeft size={24} />
         </button>
       )}
+      
       <Swiper
         ref={swiperRef}
         modules={[Navigation, Pagination]}
         spaceBetween={20}
-        slidesPerView={4}
+        slidesPerView={'auto'} 
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
-        breakpoints={{
-          0: {
-            slidesPerView: 2,
-            pagination: { enabled: true },
-          },
-          600: {
-            slidesPerView: 3,
-            pagination: { enabled: true },
-          },
-          768: {
-            slidesPerView: 3,
-            pagination: { enabled: false },
-          },
-          1024: {
-            slidesPerView: 4,
-            pagination: { enabled: false },
-          },
-        }}
         onSlideChange={handleSlideChange}
         className="events-slider"
+        style={{ paddingRight: '40px' }} 
       >
         {events.map((event, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} style={{ width: '250px' }}>
             <EventCard event={event} />
           </SwiperSlide>
         ))}
       </Swiper>
 
       {/* Conditional Right Arrow */}
-      {activeIndex < events.length - 4 && (
-        <button className="nav-button hide" 
-            onClick={goNext} 
-            aria-label="Next card">
+      {activeIndex < events.length - 1 && (
+        <button className="nav-button" onClick={goNext} aria-label="Next card">
           <ChevronRight size={24} />
         </button>
       )}

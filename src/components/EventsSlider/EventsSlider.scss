@@ -6,6 +6,12 @@
   overflow: auto;
   @include vars.flex-standard;
 
+  @media (max-width: vars.$breakpoint-md) {
+    .nav-button{
+      display: none;
+    }
+  }
+  
   .events-slider {
     height: 250px;
     .swiper-pagination {
