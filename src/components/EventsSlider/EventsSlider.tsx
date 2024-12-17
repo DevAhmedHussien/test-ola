@@ -1,30 +1,46 @@
+// ** React
 import React, { useRef, useState } from 'react';
+
+// ** third party 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { Event } from './types';
-import './EventsSlider.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination'; 
-import { EventCard } from './EventCard';
+
+// ** Icon
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+// ** Resuble componenet 
+import { EventCard } from './EventCard';
+import { Event } from './types';
+
+// ** Scss styles 
+import './EventsSlider.scss';
 
 interface EventsSliderProps {
   events: Event[];
 }
 
 export const EventsSlider: React.FC<EventsSliderProps> = ({ events }) => {
-  const swiperRef = useRef<any>(null);
+  
+  // ** States 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // ** Ref
+  const swiperRef = useRef<any>(null);
+
+  // ** Controlling active index 
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
 
+  // ** going next index 
   const goNext = () => {
     swiperRef.current?.swiper.slideNext();
   };
 
+  // ** going previous index 
   const goPrev = () => {
     swiperRef.current?.swiper.slidePrev();
   };
@@ -77,7 +93,9 @@ export const EventsSlider: React.FC<EventsSliderProps> = ({ events }) => {
 
       {/* Conditional Right Arrow */}
       {activeIndex < events.length - 4 && (
-        <button className="nav-button hide" onClick={goNext} aria-label="Next card">
+        <button className="nav-button hide" 
+            onClick={goNext} 
+            aria-label="Next card">
           <ChevronRight size={24} />
         </button>
       )}

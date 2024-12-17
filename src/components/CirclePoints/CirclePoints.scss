@@ -8,7 +8,6 @@
   @media (max-width: vars.$breakpoint-md) {
     width: 100%;
     height: 200px;
-  
   }
 }
 
@@ -23,129 +22,67 @@
   position: absolute;
   width: 100%;
   height: 100%;
-
   circle {
     fill: none;
     stroke: vars.$primary-color;
     stroke-width: 2;
     opacity: 0.2;
-    r: 220px; // Increased radius for the SVG circle
-    cx: 250px; // Updated to match the new container size
+    r: 220px; 
+    cx: 250px; 
     cy: 250px;
   }
 }
 
 .point-wrapper {
   position: absolute;
-}
-
-.point {
-  position: relative;
-  width: 7px; // Made points smaller
-  height: 7px;
-  background-color:black;// $primary-color;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 1.2s ease, transform 1.2s ease;
-
-  .hover-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 56px; // Slightly larger hover circle
-    height: 56px;
-    background: white;
-    border: 2px solid vars.$primary-color;
+  .point {
+    position: relative;
+    width: 7px; 
+    height: 7px;
+    background-color:black;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    // color: $primary-color;
-    font-size: 1rem;
-    font-weight: bold;
-    pointer-events: none;
-    animation: popIn 1.2s ease forwards;
+    cursor: pointer;
+    transition: background-color 1.2s ease, transform 1.2s ease;
+
+    &:hover {
+          background-color: vars.$primary-color;
+          transform: scale(1.2);
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 56px;
+          height: 56px;
+          border: 2px solid vars.$primary-color;
+          border-radius: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          opacity: 0;
+          background-color: black;
+          transition: transform 0.6s ease, opacity 0.6s ease, background-color 0.6s ease;
+          pointer-events: none;
+        }
+          &:hover::before,
+          &.active::before {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            background-color: white;
+          }
+        
+        .hover-circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 56px; 
+          height: 56px;
+          background:transparent;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          @include vars.flex-standard;
+          font-size: 1rem;
+          font-weight: bold;
+        }
   }
-}
-
-// Animation for smooth appearance
-@keyframes popIn {
-  from {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-}
-
-
-// @import '../../styles/variables.scss';
-
-// .circle-points {
-//   position: relative;
-//   width: 500px;
-//   height: 500px;
-//   margin: 0 auto;
-// }
-
-// .circle-container {
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-//   transform-origin: center;
-// }
-
-// .circle-svg {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-
-//   circle {
-//     fill: none;
-//     stroke: $primary-color;
-//     stroke-width: 2;
-//     opacity: 0.2;
-//   }
-// }
-
-// .point-wrapper {
-//   position: absolute;
-// }
-
-// .point {
-//   position: relative;
-//   width: 7px;
-//   height: 7px;
-//   background-color: black;
-//   border-radius: 50%;
-//   cursor: pointer;
-//   transition: background-color 0.4s ease;
-
-//   .hover-circle {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     width: 56px;
-//     height: 56px;
-//     background: white;
-//     border: 2px solid $primary-color;
-//     border-radius: 50%;
-//     transform: translate(-50%, -50%) scale(0); // Initially hidden
-//     opacity: 0;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     font-size: 1rem;
-//     font-weight: bold;
-//     pointer-events: none;
-//     transition: transform 0.3s ease, opacity 0.3s ease;
-//   }
-
-//   &.active .hover-circle {
-//     transform: translate(-50%, -50%) scale(1);
-//     opacity: 1;
-//   }
-// }
+} 

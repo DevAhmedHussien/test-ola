@@ -1,18 +1,29 @@
+// ** React
 import React, { useState, useEffect, useRef } from 'react';
+
+// ** third party 
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { gsap } from 'gsap';
+
+// ** Resuble componenet 
+import { EventsSlider } from './components/EventsSlider/EventsSlider';
 import { CirclePoints } from './components/CirclePoints/CirclePoints';
 import { categoryData } from './data/categoryData';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import NavButton from './components/button/Button';
+
+// ** Scss styles 
 import './styles/global.scss';
-import { gsap } from 'gsap';
-import { EventsSlider } from './components/EventsSlider/EventsSlider';
 
 const App: React.FC = () => {
+  
+  // ** states
   const [activeCategory, setActiveCategory] = useState(categoryData[0]);
   const cardsRef = useRef<HTMLDivElement>(null);
   const labelRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const spanRef = useRef<HTMLSpanElement>(null);
 
+  // ** animmated parts of componenets 
   useEffect(() => {
     if (labelRef.current) {
       gsap.fromTo(
@@ -49,11 +60,13 @@ const App: React.FC = () => {
     }
   }, [activeCategory]);
 
+  // ** selection clicked category by  clicking on point
   const handlePointClick = (id: number) => {
     const selectedCategory = categoryData.find((category) => category.id === id);
     if (selectedCategory) setActiveCategory(selectedCategory);
   };
 
+  // ** choose selecting category by button left and right 
   const handleNavigation = (direction: 'prev' | 'next') => {
     const currentIndex = categoryData.findIndex((category) => category.id === activeCategory.id);
     const newIndex = direction === 'prev' ? (currentIndex - 1 + categoryData.length) % categoryData.length : (currentIndex + 1) % categoryData.length;
@@ -67,11 +80,14 @@ const App: React.FC = () => {
         <span ref={titleRef}>{activeCategory.cards[0].title}</span>
         <span ref={spanRef}>{activeCategory.cards[5].title}</span>
       </h2>
-      <hr className="x-axis" />
-      <hr className="y-axis" />
+        <hr className="x-axis" />
+        <hr className="y-axis" />
 
       <div className="cercle-part" style={{ margin: '-8rem 0 0 0' }}>
-        <CirclePoints points={categoryData} categoy={activeCategory} onPointClick={handlePointClick} />
+        <CirclePoints 
+          points={categoryData} 
+          categoy={activeCategory} 
+          onPointClick={handlePointClick} />
       </div>
 
       <div className="button-part">
@@ -79,31 +95,25 @@ const App: React.FC = () => {
           0{activeCategory.id}/0{categoryData.length}
         </h2>
         <div>
-          <button
-            style={{ opacity: activeCategory.id === 1 && 0.4 }}
-            disabled={activeCategory.id === 1}
-            className="nav-button"
+          <NavButton
+            isActive={activeCategory.id === 1}
             onClick={() => handleNavigation('prev')}
-            aria-label="Previous Category"
-          >
-            <ChevronLeft size={24} />
-          </button>
-          <button
-            style={{ opacity: activeCategory.id === 6 && 0.4 }}
-            disabled={activeCategory.id === 6}
-            className="nav-button"
+            ariaLabel="Previous Category"
+            icon={<ChevronLeft size={24} />} 
+          />
+          <NavButton
+            isActive={activeCategory.id === 6}
             onClick={() => handleNavigation('next')}
             aria-label="Next Category"
-          >
-            <ChevronRight size={24} />
-          </button>
+            icon={<ChevronRight size={24} />} 
+          />
         </div>
       </div>
 
       <div ref={labelRef} className="point-label">
         {activeCategory.label}
       </div>
-      <hr className="hamada" />
+        <hr className="hamada" />
       <div className="spec-cards" ref={cardsRef}>
         <EventsSlider events={activeCategory.cards} />
       </div>
